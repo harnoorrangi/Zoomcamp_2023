@@ -9,10 +9,16 @@ from sklearn.metrics import mean_squared_error
 import mlflow
 import xgboost as xgb
 from prefect import flow, task
+<<<<<<< HEAD
 from prefect.artifacts import create_markdown_artifact
 
 
 @task(retries=3, retry_delay_seconds=2, name="Read taxi data")
+=======
+
+
+@task(retries=3, retry_delay_seconds=2)
+>>>>>>> 0facf5ae1d39d5811e913520c275145374345fe1
 def read_data(filename: str) -> pd.DataFrame:
     """Read data into DataFrame"""
     df = pd.read_parquet(filename)
@@ -107,6 +113,7 @@ def train_best_model(
         mlflow.log_artifact("models/preprocessor.b", artifact_path="preprocessor")
 
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
+<<<<<<< HEAD
 
         markdown_rmse_report = f"""# RMSE REPORT
         ## SUMMARY
@@ -131,6 +138,15 @@ def train_best_model(
 def main_flow(
     train_path: str = "/Users/harnoorrangi/Documents/mlops/mlops-zoomcamp/03-orchestration/data/green_tripdata_2021-01.parquet",
     val_path: str = "/Users/harnoorrangi/Documents/mlops/mlops-zoomcamp/03-orchestration/data/green_tripdata_2021-02.parquet",
+=======
+    return None
+
+
+@flow
+def main_flow(
+    train_path: str = "./data/green_tripdata_2021-01.parquet",
+    val_path: str = "./data/green_tripdata_2021-02.parquet",
+>>>>>>> 0facf5ae1d39d5811e913520c275145374345fe1
 ) -> None:
     """The main training pipeline"""
 
