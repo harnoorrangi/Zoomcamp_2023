@@ -130,6 +130,11 @@ Did you take notes? Add them here:
 To read the notes from the previous edition, see [here](../cohorts/2022/03-orchestration/README.md) 
 =======
 * [Prefect local deployment using Google Cloud Storage as data storage](https://github.com/ugm2/mlops-zoomcamp-workshop/tree/main/03-workflow-orchestration/3.5)
+* Notes/Blog posts by Sagar Thacker
+  * [Inrtoduction to Workflow Orchestratio & Prefect](https://sagarthacker.com/posts/mlops/intro_workflow_orchestration.html)
+  * [Prefect Blocks](https://sagarthacker.com/posts/mlops/prefect-blocks.html)
+  * [Prefect Deployments](https://sagarthacker.com/posts/mlops/prefect-deployment.html)
+  * [Prefect Cloud Deployment](https://sagarthacker.com/posts/mlops/prefect-cloud.html)
 * Send a PR, add your notes above this line
 
 ### Notes 2022 Edition
